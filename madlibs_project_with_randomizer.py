@@ -12,7 +12,7 @@ game = input("Enter a game or type random for a random game -- > ").lower()
 plural_noun = input("Enter a plural noun or type random for a random plural noun -- > ").lower()
 senses = input("Enter a sense or type random for a random sense -- > ").lower()
 
-name_list = ['', '', '', '', '']
+name_list = ['James', 'Henry', 'Maria', 'Jennifer', 'Robert']
 verb_list = ['', '', '', '', '']
 place_list = ['', '', '', '', '']
 ing_verb_list = ['', '', '', '', '']
