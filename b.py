@@ -34,15 +34,15 @@ def num_stats():
     first_half_list = sorted_num_list[:mid_point]
     second_half_list = sorted_num_list[mid_point:]
     median1 = (first_half_list[len(first_half_list) // 2] + first_half_list[(len(first_half_list) - 1) // 2]) / 2
-    median2 = (first_half_list[len(second_half_list) // 2] + second_half_list[(len(second_half_list) - 1) // 2]) / 2
-    print(median1, median2)
+    median2 = (second_half_list[len(second_half_list) // 2] + second_half_list[(len(second_half_list) - 1) // 2]) / 2
+    interquartile_range = abs(median1 - median2)
+
+    
+
+    
 
 
     
 num_stats()
-
-
-
-
 
     
