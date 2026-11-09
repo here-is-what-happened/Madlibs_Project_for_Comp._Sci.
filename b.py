@@ -1,5 +1,6 @@
 # option = input("Word sorter or number statistics? ").lower
 num_list = []
+variance_list = []
 word_list = []
 
 def num_stats():
@@ -26,6 +27,8 @@ def num_stats():
         if count > max_count:
             max_count = count
             mode = item
+    if mode == None:
+        mode = 'None'
     range_of_nums_list = max(num_list) - min(num_list)
 
 
@@ -37,12 +40,40 @@ def num_stats():
     median2 = (second_half_list[len(second_half_list) // 2] + second_half_list[(len(second_half_list) - 1) // 2]) / 2
     interquartile_range = abs(median1 - median2)
 
-    
+    for num in range(length_of_list):
+        b = (num - mean) ** 2
+        b.append[variance_list]
+    variance = sum(variance_list) / length_of_list
 
-    
+    standard_deviation = variance ** 0.5
+    coefficient_of_variation = standard_deviation / mean
 
 
-    
+
+
+
+
+
+
+
+
+
+
+    print(f"The mean is {mean}")
+    print(f"The median is {median}")
+    print(f"The mode is {mode}")
+    print(f"The range is {range_of_nums_list}")
+    print(f"The midpoint is {mid_point}")
+    print(f"The max is {max(num_list)}")
+    print(f"The min is {min(num_list)}")
+    print(f"The sum is {sum(num_list)}")
+    print(f"")
+    print(f"")
+    print(f"")
+    print(f"")
+    print(f"")
+
+
 num_stats()
 
     
