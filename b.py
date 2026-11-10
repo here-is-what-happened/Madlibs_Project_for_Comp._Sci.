@@ -1,6 +1,7 @@
 # option = input("Word sorter or number statistics? ").lower
 num_list = []
 variance_list = []
+mean_absolute_deviation = []
 word_list = []
 
 def num_stats():
@@ -33,7 +34,7 @@ def num_stats():
 
 
 
-    mid_point = length_of_list // 2
+    mid_point = (max(num_list) + min(num_list)) / 2
     first_half_list = sorted_num_list[:mid_point]
     second_half_list = sorted_num_list[mid_point:]
     median1 = (first_half_list[len(first_half_list) // 2] + first_half_list[(len(first_half_list) - 1) // 2]) / 2
@@ -42,36 +43,35 @@ def num_stats():
 
     for num in range(length_of_list):
         b = (num - mean) ** 2
-        b.append[variance_list]
+        variance_list.append(b)
     variance = sum(variance_list) / length_of_list
 
     standard_deviation = variance ** 0.5
     coefficient_of_variation = standard_deviation / mean
 
+    for num in range(length_of_list):
+        c = abs(num - mean)
+        mean_absolute_deviation.append(c)
+    mean_absolute_deviation_amount = sum(mean_absolute_deviation) / len(mean_absolute_deviation)
 
 
 
 
-
-
-
-
-
-
-
-    print(f"The mean is {mean}")
-    print(f"The median is {median}")
-    print(f"The mode is {mode}")
-    print(f"The range is {range_of_nums_list}")
-    print(f"The midpoint is {mid_point}")
-    print(f"The max is {max(num_list)}")
-    print(f"The min is {min(num_list)}")
-    print(f"The sum is {sum(num_list)}")
-    print(f"")
-    print(f"")
-    print(f"")
-    print(f"")
-    print(f"")
+    print(f"Mean: {mean}")
+    print(f"Median {median}")
+    print(f"Mode: {mode}")
+    print(f"Range: {range_of_nums_list}")
+    print(f"Midpoint: {mid_point}")
+    print(f"Max: {max(num_list)}")
+    print(f"Min: {min(num_list)}")
+    print(f"Sum: {sum(num_list)}")
+    print(f"Quartile 1: {median1}")
+    print(f"Quartile 3: {median2}")
+    print(f"Interquartile range: {interquartile_range}")
+    print(f"Variance: {variance}")
+    print(f"Standard deviation: {standard_deviation}")
+    print(f"Coeffient of variance(CV): {coefficient_of_variation}")
+    print(f"Mean absolute deviation: {mean_absolute_deviation_amount}")
 
 
 num_stats()
