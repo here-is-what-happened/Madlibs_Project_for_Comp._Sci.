@@ -82,8 +82,37 @@ def num_stats():
         print(f"Coefficient of variation (CV): {coefficient_of_variation:.2%}")
     print(f"Mean absolute deviation: {mean_absolute_deviation_amount}")
 
+def word_list():
+    # alphabetical
+    # reverse alphabetical
+    # number of characters
+    # 
+    total_words = int(input("How many words would you like to enter? (Remember enter 1 at a time): "))
+    for _ in range(total_words):
+        d = print("Enter a word: ")
+        word_list.append(d)
 
-   
-num_stats()
+    alphabetically = word_list.sort()
+        
+
+
+
+
+
+
+
+
+
+
+    print(f"")
+    print(f"")
+    print(f"")
+    print(f"")
+    print(f"")
+    print(f"")
+    print(f"")
+    print(f"")
+    print(f"")
+    print(f"")
 
     
