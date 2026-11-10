@@ -28,28 +28,33 @@ def num_stats():
         if count > max_count:
             max_count = count
             mode = item
-    if mode == None:
+    if max_count == 1:
         mode = 'None'
     range_of_nums_list = max(num_list) - min(num_list)
 
 
 
     mid_point = (max(num_list) + min(num_list)) / 2
-    first_half_list = sorted_num_list[:mid_point]
-    second_half_list = sorted_num_list[mid_point:]
+    mid = length_of_list // 2
+    first_half_list = sorted_num_list[:mid]
+    second_half_list = sorted_num_list[mid:]
     median1 = (first_half_list[len(first_half_list) // 2] + first_half_list[(len(first_half_list) - 1) // 2]) / 2
     median2 = (second_half_list[len(second_half_list) // 2] + second_half_list[(len(second_half_list) - 1) // 2]) / 2
     interquartile_range = abs(median1 - median2)
 
-    for num in range(length_of_list):
+    for num in num_list:
         b = (num - mean) ** 2
         variance_list.append(b)
-    variance = sum(variance_list) / length_of_list
+    p_variance = sum(variance_list) / length_of_list
+    s_variance = sum(variance_list) / ( length_of_list - 1 )
 
-    standard_deviation = variance ** 0.5
-    coefficient_of_variation = standard_deviation / mean
+    standard_deviation = p_variance ** 0.5
+    if mean == 0:
+        coefficient_of_variation = None
+    else:
+        coefficient_of_variation = standard_deviation / mean
 
-    for num in range(length_of_list):
+    for num in num_list:
         c = abs(num - mean)
         mean_absolute_deviation.append(c)
     mean_absolute_deviation_amount = sum(mean_absolute_deviation) / len(mean_absolute_deviation)
@@ -68,12 +73,17 @@ def num_stats():
     print(f"Quartile 1: {median1}")
     print(f"Quartile 3: {median2}")
     print(f"Interquartile range: {interquartile_range}")
-    print(f"Variance: {variance}")
+    print(f"Population variance: {p_variance}")
+    print(f"Sample variance: {s_variance}")
     print(f"Standard deviation: {standard_deviation}")
-    print(f"Coeffient of variance(CV): {coefficient_of_variation}")
+    if coefficient_of_variation is None:
+        print("Coefficient of variation (CV): None")
+    else:
+        print(f"Coefficient of variation (CV): {coefficient_of_variation:.2%}")
     print(f"Mean absolute deviation: {mean_absolute_deviation_amount}")
 
 
+   
 num_stats()
 
     
