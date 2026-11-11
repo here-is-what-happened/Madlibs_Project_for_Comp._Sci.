@@ -3,6 +3,7 @@ num_list = []
 variance_list = []
 mean_absolute_deviation = []
 word_list = []
+word_ratios = []
 
 def num_stats():
     # Reminder for later of stuff:
@@ -82,37 +83,48 @@ def num_stats():
         print(f"Coefficient of variation (CV): {coefficient_of_variation:.2%}")
     print(f"Mean absolute deviation: {mean_absolute_deviation_amount}")
 
-def word_list():
+def word_sorter():
+    #filler
     # alphabetical
     # reverse alphabetical
     # number of characters
-    # 
+    
+
     total_words = int(input("How many words would you like to enter? (Remember enter 1 at a time): "))
     for _ in range(total_words):
-        d = print("Enter a word: ")
+        d = input("Enter a word: ")
         word_list.append(d)
 
-    alphabetically = word_list.sort()
+    alphabetically = sorted(word_list, key=str)
+    reverse_alphabetically = sorted(word_list, reverse=True, key=str)
+
+    print(reverse_alphabetically, alphabetically)
+
+
+
+    vowels = 'aeiouAEIOU'
+    for word in word_list:
+        consonants = 0
+        vowels = 0
+        for letter in word:
+            
+
+
+
+
+
+
+
+    print(f"Alphabetically: {alphabetically}")
+    print(f"Reverse alphabetically: {reverse_alphabetically}")
+    print(f"")
+    print(f"")
+    print(f"")
+    print(f"")
+    print(f"")
+    print(f"")
+    print(f"")
+    print(f"")
+
         
-
-
-
-
-
-
-
-
-
-
-    print(f"")
-    print(f"")
-    print(f"")
-    print(f"")
-    print(f"")
-    print(f"")
-    print(f"")
-    print(f"")
-    print(f"")
-    print(f"")
-
-    
+word_sorter()
