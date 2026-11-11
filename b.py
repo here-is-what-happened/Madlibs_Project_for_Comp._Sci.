@@ -104,10 +104,27 @@ def word_sorter():
 
     vowels = 'aeiouAEIOU'
     for word in word_list:
-        consonants = 0
-        vowels = 0
+        amount_consonants = 0
+        amount_vowels = 0
         for letter in word:
-            
+            if letter in 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM':
+                if letter in vowels:
+                    amount_vowels += 1
+                else:
+                    amount_consonants += 1
+                
+            if amount_vowels == 0:
+                ratio = 10000000
+            else:
+                ratio = amount_consonants / amount_vowels
+
+    word_ratios.append([ratio, word])
+
+    lowest_highest = sorted(word_ratios)
+    highest_lowest = sorted(word_ratios, reverse=True)
+   
+
+
 
 
 
@@ -117,8 +134,8 @@ def word_sorter():
 
     print(f"Alphabetically: {alphabetically}")
     print(f"Reverse alphabetically: {reverse_alphabetically}")
-    print(f"")
-    print(f"")
+    print(f"Ratio highest to lowest: {highest_lowest}")
+    print(f"Ratio lowest to highest: {lowest_highest}")
     print(f"")
     print(f"")
     print(f"")
