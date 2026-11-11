@@ -4,6 +4,7 @@ variance_list = []
 mean_absolute_deviation = []
 word_list = []
 word_ratios = []
+length_word_list = []
 
 def num_stats():
     # Reminder for later of stuff:
@@ -14,7 +15,7 @@ def num_stats():
     # skew and mean absolute deviation
     amount = int(input("How many numbers would you like to enter? "))
     for _ in range(amount):
-        a = int(input("Enter a number: "))
+        a = float(input("Enter a number: "))
         num_list.append(a)
 
     sorted_num_list = sorted(num_list)
@@ -123,7 +124,7 @@ def word_sorter():
     lowest_highest = sorted(word_ratios)
     highest_lowest = sorted(word_ratios, reverse=True)
    
-
+    length_of_word
 
 
 
@@ -144,4 +145,4 @@ def word_sorter():
     print(f"")
 
         
-word_sorter()
+num_stats()
