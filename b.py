@@ -7,13 +7,22 @@ word_ratios = []
 length_word_list = []
 
 def num_stats():
+   
+
     # Reminder for later of stuff:
     # mean, median, range, mode
     # interquartile range
     # variance and standard deviation
     # min and max
     # skew and mean absolute deviation
+
     amount = int(input("How many numbers would you like to enter? "))
+    if amount > 0 and amount.is_integer == True:
+        pass
+    else:
+        print("Enter an integer above 0.")
+        
+        
     for _ in range(amount):
         a = float(input("Enter a number: "))
         num_list.append(a)
@@ -96,6 +105,8 @@ def word_sorter():
         d = input("Enter a word: ")
         word_list.append(d)
 
+    
+
     alphabetically = sorted(word_list, key=str)
     reverse_alphabetically = sorted(word_list, reverse=True, key=str)
 
@@ -137,7 +148,7 @@ def word_sorter():
     print(f"Reverse alphabetically: {reverse_alphabetically}")
     print(f"Ratio highest to lowest: {highest_lowest}")
     print(f"Ratio lowest to highest: {lowest_highest}")
-    print(f"")
+    print(f"By word length:")
     print(f"")
     print(f"")
     print(f"")
